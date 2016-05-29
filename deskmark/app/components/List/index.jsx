@@ -3,6 +3,7 @@
  */
 
 import React, { PropTypes } from 'react';
+import { pure } from 'recompose';
 import ListItem from '../ListItem';
 
 const propTypes = {
@@ -30,4 +31,4 @@ function List({ items, onSelect }) {
 
 List.propTypes = propTypes;
 
-export default List;
+export default pure(List);

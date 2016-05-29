@@ -4,9 +4,9 @@
   "description": "an web markdown writer an docs manager based on indexeddb and build on React.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "NODE_ENV=production webpack --config webpack.config.prod.js",
     "dev": "webpack-dev-server --hot --host 0.0.0.0",
-    "test": "NODE_ENV=production mocha --compilers js:babel-core/register --require ignore-styles"
+    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require ignore-styles"
   },
   "directories": {
     "test": "test"
@@ -46,6 +46,7 @@
     "ignore-styles": "^2.0.0",
     "mocha": "^2.3.4",
     "node-sass": "^3.4.2",
+    "react-addons-perf": "^15.0.1",
     "react-addons-test-utils": "^15.0.1",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
@@ -57,6 +58,7 @@
     "babel-polyfill": "^6.6.1",
     "marked": "^0.3.5",
     "react": "^15.0.1",
-    "react-dom": "^15.0.1"
+    "react-dom": "^15.0.1",
+    "recompose": "^0.19.0"
   }
 }

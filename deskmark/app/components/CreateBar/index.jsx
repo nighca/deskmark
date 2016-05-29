@@ -5,6 +5,7 @@
 import './style.scss';
 
 import React, { PropTypes } from 'react';
+import { pure } from 'recompose';
 
 const propTypes = {
   onClick: PropTypes.func.isRequired,
@@ -20,4 +21,4 @@ function CreateBar({ onClick }) {
 
 CreateBar.propTypes = propTypes;
 
-export default CreateBar;
+export default pure(CreateBar);

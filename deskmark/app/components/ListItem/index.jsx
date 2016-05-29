@@ -3,6 +3,7 @@
  */
 
 import React, { PropTypes } from 'react';
+import { onlyUpdateForKeys } from 'recompose';
 
 const propTypes = {
   item: PropTypes.object.isRequired,
@@ -30,4 +31,4 @@ function ListItem({ item, onClick }) {
 
 ListItem.propTypes = propTypes;
 
-export default ListItem;
+export default onlyUpdateForKeys(['item'])(ListItem);
